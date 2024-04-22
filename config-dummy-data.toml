@@ -1,0 +1,41 @@
+n_rows = 100
+
+
+[[var]]
+
+name = "person_id"
+data_free = true
+prop_missing = 0.0
+description = "Unique identifier of the person"
+var_type = "discrete"
+distribution = {implements = "core.unique_key", unique = true, parameters = {consecutive = true, lower = 1}}
+
+
+[[var]]
+
+name = "covid"
+data_free = true
+prop_missing = 0.0
+description = "Categorical variable representing presence of COVID-19 disease in given observation spell"
+var_type = "categorical"
+distribution = {implements = "core.multinoulli", parameters = {labels = ["0", "1"], probs = [0.2, 0.8]}}
+
+
+[[var]]
+
+name = "start"
+data_free = true
+prop_missing = 0.0
+description = "Date representing start of observation spell"
+var_type = "datetime"
+distribution = {implements = "core.uniform", parameters = {lower = "2021-01-01", upper = "2023-01-01", precision = "days"}}
+
+
+[[var]]
+
+name = "end"
+data_free = true
+prop_missing = 0.0
+description = "Date representing end of observation spell"
+var_type = "datetime"
+distribution = {implements = "core.uniform", parameters = {lower = "2021-01-01", upper = "2023-01-01", precision = "days"}}
