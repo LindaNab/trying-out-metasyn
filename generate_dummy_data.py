@@ -1,6 +1,6 @@
 # Generating dummy data using metasyn without using an input dataset
-# input: ./config-dummy-data.toml
-# output: ./dummy-data.csv
+# input: ./input/config-dummy-data.toml
+# output: ./output/dummy-data.csv; ./output/gmf-dummy-data.json
 
 import os
 from metasyn import MetaFrame
