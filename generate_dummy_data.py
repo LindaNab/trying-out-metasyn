@@ -6,7 +6,8 @@ import os
 from metasyn import MetaFrame
 
 # Create subdir "output" where output is saved
-os.mkdir("output")
+if not os.path.exists("output"):
+    os.mkdir("output")
 
 # Create MetaFrame from config file 
 config = MetaFrame.from_config("input/config-dummy-data.toml")
