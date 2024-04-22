@@ -1,0 +1,105 @@
+{
+    "n_rows": 100,
+    "n_columns": 4,
+    "provenance": {
+        "created by": {
+            "name": "metasyn",
+            "version": "0.8.0"
+        },
+        "creation time": "2024-04-22T13:21:20.093532"
+    },
+    "vars": [
+        {
+            "name": "person_id",
+            "type": "discrete",
+            "dtype": "unknown",
+            "prop_missing": 0.0,
+            "distribution": {
+                "implements": "core.unique_key",
+                "version": "1.0",
+                "provenance": "builtin",
+                "class_name": "UniqueKeyDistribution",
+                "unique": true,
+                "parameters": {
+                    "lower": 1,
+                    "consecutive": true
+                }
+            },
+            "creation_method": {
+                "created_by": "user"
+            },
+            "description": "Unique identifier of the person"
+        },
+        {
+            "name": "covid",
+            "type": "categorical",
+            "dtype": "unknown",
+            "prop_missing": 0.0,
+            "distribution": {
+                "implements": "core.multinoulli",
+                "version": "1.0",
+                "provenance": "builtin",
+                "class_name": "MultinoulliDistribution",
+                "unique": false,
+                "parameters": {
+                    "labels": [
+                        "0",
+                        "1"
+                    ],
+                    "probs": [
+                        0.2,
+                        0.8
+                    ]
+                }
+            },
+            "creation_method": {
+                "created_by": "user"
+            },
+            "description": "Categorical variable representing presence of COVID-19 disease in given observation spell"
+        },
+        {
+            "name": "start",
+            "type": "datetime",
+            "dtype": "unknown",
+            "prop_missing": 0.0,
+            "distribution": {
+                "implements": "core.uniform",
+                "version": "1.0",
+                "provenance": "builtin",
+                "class_name": "DateTimeUniformDistribution",
+                "unique": false,
+                "parameters": {
+                    "lower": "2021-01-01T00:00:00",
+                    "upper": "2023-01-01T00:00:00",
+                    "precision": "days"
+                }
+            },
+            "creation_method": {
+                "created_by": "user"
+            },
+            "description": "Date representing start of observation spell"
+        },
+        {
+            "name": "end",
+            "type": "datetime",
+            "dtype": "unknown",
+            "prop_missing": 0.0,
+            "distribution": {
+                "implements": "core.uniform",
+                "version": "1.0",
+                "provenance": "builtin",
+                "class_name": "DateTimeUniformDistribution",
+                "unique": false,
+                "parameters": {
+                    "lower": "2021-01-01T00:00:00",
+                    "upper": "2023-01-01T00:00:00",
+                    "precision": "days"
+                }
+            },
+            "creation_method": {
+                "created_by": "user"
+            },
+            "description": "Date representing end of observation spell"
+        }
+    ]
+}
